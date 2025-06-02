@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Menu list using a loop
+  // Menu list example (for menu.html if you create it)
   const menuList = document.getElementById("menuList");
   if (menuList) {
     const items = ["Chocolate Chip Cookies", "Almond Croissant", "Blueberry Muffin", "Lemon Tart", "Vanilla Bean Cake"];
