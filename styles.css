@@ -140,29 +140,36 @@ button:hover {
 }
 
 .menu-section {
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
   max-width: 900px;
   margin: auto;
+  text-align: center;
 }
 
-.menu-section h2 {
-  font-size: 2rem;
-  color: #d35400;
-  margin-bottom: 1.5rem;
-  text-align: center;
+.menu-callout {
+  display: inline-block;
+  background-color: #f7b267;
+  color: #3e2f1c;
+  padding: 0.5rem 1.5rem;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
 }
 
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  margin-top: 2rem;
+  text-align: left;
 }
 
 .menu-item {
   background-color: #fff;
   border-radius: 10px;
   padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .menu-item h3 {
@@ -183,6 +190,7 @@ button:hover {
   font-size: 0.95rem;
   color: #666;
 }
+
 
 /* Footer */
 footer {
