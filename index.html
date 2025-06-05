@@ -1,105 +1,200 @@
 <!DOCTYPE html>
-<!-- Указывает, что документ — это HTML5 -->
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <!-- Устанавливает кодировку на UTF-8 для корректного отображения символов -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <!-- Оптимизирует страницу под мобильные устройства -->
   <title>Пекарня Sweet Crumbs</title>
-  <!-- Подключение внешнего CSS-файла -->
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Подключение шрифта Playfair Display с Google Fonts -->
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Верхняя навигационная панель -->
   <header class="topbar">
     <div class="logo">Sweet <span>Crumbs</span></div>
     <nav>
-      <!-- Ссылки на другие страницы сайта -->
       <a href="index.html">Главная</a>
       <a href="about.html">О Нас</a>
     </nav>
   </header>
 
-  <!-- Герой-секция с фоном и заголовком -->
   <section class="hero">
-    <div class="overlay"></div> <!-- Полупрозрачный слой для затемнения фона -->
+    <div class="overlay"></div>
     <div class="hero-text">
       <p class="subtitle">Пекарня и Кафе с 2025 года</p>
       <h1>Ваше любимое место<br>для свежей выпечки и кофе</h1>
-      <!-- Кнопка, ведущая к меню -->
       <div class="hero-buttons">
         <a href="#menu" class="btn outline">Наше Меню</a>
       </div>
     </div>
   </section>
 
-  <!-- Панель с объявлением -->
   <div class="announcement-bar">
     <p>Бранч по выходным &nbsp; | &nbsp; Суббота 9:00 – 14:00</p>
   </div>
 
-<!-- Секция меню -->
 <section class="menu-section" id="menu">
   <div class="menu-header">
     <h2>Наше Меню</h2>
     <p>Попробуйте наши свежие блюда, приготовленные с любовью каждое утро.</p>
   </div>
 
-  <!-- Переключатели табов меню -->
+  <!-- Tabs -->
   <div class="menu-tabs">
     <button class="tab active" onclick="showTab('allDay')">Завтраки весь день</button>
     <button class="tab" onclick="showTab('drinks')">Напитки</button>
   </div>
 
-  <!-- Контент табов -->
+  <!-- Content -->
   <div class="menu-content">
-    <!-- Таб: Завтраки весь день -->
-    <div id="allDay" class="menu-tab active">
-      <div class="menu-category">
+    <!-- Breakfast Tab -->
+<div id="allDay" class="menu-tab active">
+  <div class="menu-category">
 
-        <!-- Подкатегория: Хлеба -->
-        <h3>Хлеба</h3>
-        <div class="menu-items">
-          <!-- Отдельный пункт меню -->
-          <div class="menu-item">
-            <h4><strong>Багет классический</strong></h4>
-            <p>Хрустящий французский багет, свежевыпеченный каждое утро.</p>
-            <span>₽350</span>
-          </div>
-          <!-- Другие пункты... (Чиабатта, Хлеб на закваске и т.д.) -->
-        </div>
-
-        <!-- Подкатегории: Круассаны, Маффины, Печенье -->
-        <!-- Аналогично с другими блюдами, каждая секция организована как h3 + .menu-items с .menu-item -->
+    <h3>Хлеба</h3>
+    <div class="menu-items">
+      <div class="menu-item">
+        <h4><strong>Багет классический</strong></h4>
+        <p>Хрустящий французский багет, свежевыпеченный каждое утро.</p>
+        <span>₽350</span>
+      </div>
+      <div class="menu-item">
+        <h4><strong>Чиабатта</strong></h4>
+        <p>Итальянский белый хлеб с воздушной текстурой и хрустящей коркой.</p>
+        <span>₽370</span>
+      </div>
+      <div class="menu-item">
+        <h4><strong>Хлеб на закваске</strong></h4>
+        <p>Ремесленный хлеб с плотным мякишем и естественной ферментацией.</p>
+        <span>₽400</span>
       </div>
     </div>
 
-    <!-- Таб: Напитки -->
+    <h3>Круассаны и выпечка</h3>
+    <div class="menu-items">
+      <div class="menu-item">
+        <h4><strong>Круассан с маслом</strong></h4>
+        <p>Слоёное тесто с хрустящей корочкой и мягкой сердцевиной.</p>
+        <span>₽390</span>
+      </div>
+      <div class="menu-item">
+        <h4><strong>Пен о Шоколá</strong></h4>
+        <p>Французская булочка с тёмным шоколадом внутри.</p>
+        <span>₽440</span>
+      </div>
+      <div class="menu-item">
+        <h4><strong>Булочка с корицей</strong></h4>
+        <p>Тёплая булочка с корицей и сахарной глазурью.</p>
+        <span>₽420</span>
+      </div>
+      <div class="menu-item">
+        <h4><strong>Тарт с ягодами</strong></h4>
+        <p>Тонкое тесто с заварным кремом и свежими ягодами.</p>
+        <span>₽460</span>
+      </div>
+    </div>
+
+    <h3>Маффины и пирожные</h3>
+    <div class="menu-items">
+      <div class="menu-item">
+        <h4><strong>Маффин с черникой</strong></h4>
+        <p>Пышный маффин с сочной черникой и лимонной цедрой.</p>
+        <span>₽390</span>
+      </div>
+      <div class="menu-item">
+        <h4><strong>Шоколадный маффин</strong></h4>
+        <p>Маффин с насыщенным шоколадным вкусом и кусочками какао.</p>
+        <span>₽400</span>
+      </div>
+      <div class="menu-item">
+        <h4><strong>Французский флан</strong></h4>
+        <p>Нежное заварное пирожное на тонком тесте.</p>
+        <span>₽440</span>
+      </div>
+    </div>
+
+    <h3>Печенье и сладости</h3>
+    <div class="menu-items">
+      <div class="menu-item">
+        <h4><strong>Миндальное печенье</strong></h4>
+        <p>Безглютеновое печенье с миндальной мукой и сахарной пудрой.</p>
+        <span>₽320</span>
+      </div>
+      <div class="menu-item">
+        <h4><strong>Шоколадное печенье</strong></h4>
+        <p>Мягкое печенье с кусочками тёмного шоколада.</p>
+        <span>₽330</span>
+      </div>
+      <div class="menu-item">
+        <h4><strong>Фисташковый макарон</strong></h4>
+        <p>Французское миндальное печенье с фисташковым кремом.</p>
+        <span>₽120</span>
+      </div>
+      <div class="menu-item">
+        <h4><strong>Карамельный эклер</strong></h4>
+        <p>Песочное тесто с карамельным кремом и глазурью.</p>
+        <span>₽380</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+    
+    <!-- Drinks Tab -->
     <div id="drinks" class="menu-tab hidden">
       <div class="menu-category">
         <h3>Кофе</h3>
         <div class="menu-items">
-          <!-- Отдельные напитки: Эспрессо, Американо и т.д. -->
+          <div class="menu-item">
+            <h4><strong>Эспрессо</strong></h4>
+            <p>Насыщенный и концентрированный кофе.</p>
+            <span>₽240</span>
+          </div>
+          <div class="menu-item">
+            <h4><strong>Американо</strong></h4>
+            <p>Эспрессо с добавлением горячей воды.</p>
+            <span>₽280</span>
+          </div>
+          <div class="menu-item">
+            <h4><strong>Латте</strong></h4>
+            <p>Эспрессо с молоком и лёгкой пенкой.</p>
+            <span>₽320</span>
+          </div>
+          <div class="menu-item">
+            <h4><strong>Капучино</strong></h4>
+            <p>Равные части эспрессо, молока и пены.</p>
+            <span>₽320</span>
+          </div>
+          <div class="menu-item">
+            <h4><strong>Флэт Уайт</strong></h4>
+            <p>Меньше пены, больше вкуса — нежный молочный кофе.</p>
+            <span>₽360</span>
+          </div>
         </div>
 
         <h3 style="margin-top: 3rem;">Авторские напитки</h3>
         <div class="menu-items">
-          <!-- Чай латте, Матча латте, Золотой латте -->
+          <div class="menu-item">
+            <h4><strong>Чай Латте</strong></h4>
+            <p>Пряный чай с парным молоком.</p>
+            <span>₽480</span>
+          </div>
+          <div class="menu-item">
+            <h4><strong>Матча Латте</strong></h4>
+            <p>Японский зелёный чай в сочетании с молоком.</p>
+            <span>₽480</span>
+          </div>
+          <div class="menu-item">
+            <h4><strong>Золотой Латте</strong></h4>
+            <p>Куркума, специи и парное молоко — без кофеина.</p>
+            <span>₽520</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Нижний колонтитул (подвал) -->
-<footer class="footer">
+  <footer class="footer">
   <div class="footer-container">
-
-    <!-- Секция: подписка на рассылку -->
     <div class="newsletter">
       <h3>Рассылка</h3>
       <p>Подпишитесь, чтобы быть в курсе всех новинок от Sweet Crumbs.</p>
@@ -114,7 +209,6 @@
       </form>
     </div>
 
-    <!-- Секция: контактная информация -->
     <div class="contact">
       <h3>Связаться с нами</h3>
       <p>+7 (000) 123-45-67<br>
@@ -123,14 +217,10 @@
       Санкт-Петербург, Россия</p>
     </div>
   </div>
-
-  <!-- Нижняя строка футера -->
   <div class="footer-bottom">
     <p>&copy; 2025 Sweet Crumbs. Все права защищены.</p>
   </div>
 </footer>
-
-<!-- Подключение JavaScript-файла -->
 <script src="script.js"></script>
 </body>
 </html>
