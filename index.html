@@ -19,9 +19,10 @@
     </nav>
   </header>
 
-  <main>
+  <main class="homepage-layout">
 
-    <!-- Hero Section -->
+  <!-- Main Content (Hero + Newsletter) -->
+  <div class="main-column">
     <section class="hero">
       <div class="hero-content">
         <h2>Свежая выпечка каждое утро</h2>
@@ -30,7 +31,6 @@
       </div>
     </section>
 
-    <!-- Newsletter Sign-up -->
     <section class="newsletter">
       <h3>Присоединяйтесь к нашему клубу Crumbs</h3>
       <form id="newsletterForm">
@@ -40,41 +40,29 @@
       </form>
       <p id="thankYouMessage"></p>
     </section>
+  </div>
 
-    <!-- Events Section -->
-    <section class="events">
-      <h3>✨ Предстоящие события в Sweet Crumbs</h3>
+  <!-- Sidebar for Events -->
+  <aside class="sidebar-events">
+    <h3>Ближайшие события</h3>
+    <ul>
+      <li>
+        <strong>Живая музыка – Пятница:</strong><br />
+        Акустика и круассаны с 18:00
+      </li>
+      <li>
+        <strong>Ярмарка мастеров – Воскресенье:</strong><br />
+        Ремесленные изделия и капучино
+      </li>
+      <li>
+        <strong>Уголок чтения – Понедельник:</strong><br />
+        Тихий утренний кофе и книги
+      </li>
+    </ul>
+  </aside>
 
-      <div class="event-list">
+</main>
 
-        <div class="event-item">
-          <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Live Music" />
-          <div>
-            <h4>Живая музыка & Круассаны</h4>
-            <p>Приходите в пятницу вечером! Живая акустика, свежая выпечка и уютная атмосфера с 18:00 до 20:30.</p>
-          </div>
-        </div>
-
-        <div class="event-item">
-          <img src="https://images.unsplash.com/photo-1542838132-92c53300491e" alt="Craft Fair" />
-          <div>
-            <h4>Мини-ярмарка мастеров</h4>
-            <p>В это воскресенье местные мастера представят изделия ручной работы. Возьмите капучино и найдите подарок!</p>
-          </div>
-        </div>
-
-        <div class="event-item">
-          <img src="https://images.unsplash.com/photo-1606788075761-4ba89c12b6d3" alt="Reading Corner" />
-          <div>
-            <h4>Уголок чтения и капучино</h4>
-            <p>Каждое утро понедельника — тихое открытие недели с книгами, мягкой музыкой и скидкой на кофе.</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
 
   <footer>
     <p>&copy; 2025 Пекарня Sweet Crumbs</p>
