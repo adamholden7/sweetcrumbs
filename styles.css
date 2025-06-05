@@ -1,4 +1,4 @@
-/* Import base styles */
+/* Base Styles */
 body {
   font-family: 'Poppins', 'Segoe UI', sans-serif;
   margin: 0;
@@ -8,6 +8,7 @@ body {
   line-height: 1.6;
 }
 
+/* Header */
 header {
   background-color: #f7b267;
   color: white;
@@ -30,10 +31,9 @@ h1 {
 nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: center;
   gap: 1rem;
-  margin-top: 1rem;
 }
 
 nav a {
@@ -47,6 +47,50 @@ nav a {
 
 nav a:hover {
   background-color: #a84300;
+}
+
+/* Homepage Layout with Sidebar */
+.homepage-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.main-column {
+  flex: 3;
+  min-width: 0;
+}
+
+/* Sidebar Events */
+.sidebar-events {
+  flex: 1;
+  background-color: #fff0db;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-size: 0.95rem;
+}
+
+.sidebar-events h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #3e2f1c;
+}
+
+.sidebar-events ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-events li {
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
 }
 
 /* Hero Section */
@@ -104,7 +148,7 @@ nav a:hover {
   background-color: #e19a4c;
 }
 
-/* Newsletter Section */
+/* Newsletter */
 .newsletter {
   padding: 4rem 1rem;
   background-color: #fff0db;
@@ -145,6 +189,7 @@ button:hover {
   background-color: #e09e52;
 }
 
+/* Menu Section */
 .menu-section {
   padding: 4rem 1rem;
   max-width: 900px;
@@ -197,57 +242,23 @@ button:hover {
   color: #666;
 }
 
-.events {
-  background-color: #fff0db;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.events h3 {
-  font-size: 2rem;
-  color: #3e2f1c;
-  margin-bottom: 2rem;
-}
-
-.event-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.event-item {
-  display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
-  align-items: center;
-  background-color: #fffaf3;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-}
-
-.event-item img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.event-item h4 {
-  margin: 0 0 0.25rem;
-  font-size: 1.25rem;
-  color: #d35400;
-}
-
-.event-item p {
-  margin: 0;
-  color: #5a4531;
-}
-
 /* Footer */
 footer {
   font-size: 0.9rem;
   margin-top: 2rem;
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #f7b267;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .homepage-layout {
+    flex-direction: column;
+  }
+
+  .sidebar-events {
+    margin-top: 2rem;
+  }
 }
