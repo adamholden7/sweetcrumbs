@@ -1,6 +1,6 @@
 /* Base Styles */
 body {
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-family: 'Georgia', serif;
   margin: 0;
   padding: 0;
   background-color: #fffaf3;
@@ -10,22 +10,19 @@ body {
 
 /* Header */
 header {
-  background-color: #f7b267;
-  color: white;
+  background-color: #fffaf3;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  border-bottom: 1px solid #e0dacb;
 }
 
 h1 {
+  font-family: 'Georgia', serif;
+  font-size: 1.75rem;
   margin: 0;
-  font-size: 2rem;
-  letter-spacing: 1px;
-  white-space: nowrap;
+  font-weight: bold;
 }
 
 nav ul {
@@ -33,33 +30,33 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 nav a {
   text-decoration: none;
-  color: white;
-  background-color: #d35400;
-  padding: 0.5em 1em;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
+  color: #3e2f1c;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
-  background-color: #a84300;
+  color: #4b7252;
 }
 
-/* Full Hero Section (New Style) */
+/* Hero Section */
 .full-hero {
   height: 100vh;
   background-image: url('https://images.unsplash.com/photo-1578985545062-69928b1d9587');
   background-size: cover;
   background-position: center;
-  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+  text-align: left;
+  padding: 4rem 10%;
+  color: white;
 }
 
 .hero-overlay {
@@ -71,34 +68,46 @@ nav a:hover {
 }
 
 .hero-overlay h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
 }
 
 .hero-overlay p {
   font-size: 1.25rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.cta-button {
-  margin-top: 1rem;
-  display: inline-block;
-  padding: 0.75em 1.5em;
-  background-color: #f7b267;
-  color: #fff;
-  border-radius: 25px;
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-buttons a {
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
-.cta-button.large {
-  font-size: 1.1rem;
-  padding: 0.85em 2em;
+.hero-buttons .btn-primary {
+  background-color: #4b7252;
+  color: white;
 }
 
-.cta-button:hover {
-  background-color: #e19a4c;
+.hero-buttons .btn-primary:hover {
+  background-color: #3c5b41;
+}
+
+.hero-buttons .btn-secondary {
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+}
+
+.hero-buttons .btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Events Scroll Section */
@@ -115,20 +124,20 @@ nav a:hover {
 
 .events-scroll {
   display: flex;
-  overflow-x: auto;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
   padding-bottom: 1rem;
-  scroll-snap-type: x mandatory;
 }
 
 .event-card {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
   background-color: #fffaf3;
   padding: 1rem 1.25rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   min-width: 250px;
+  max-width: 280px;
+  flex: 1 1 auto;
 }
 
 .event-card h4 {
@@ -141,61 +150,13 @@ nav a:hover {
   font-size: 0.95rem;
 }
 
-.events-scroll::-webkit-scrollbar {
-  height: 8px;
-}
-.events-scroll::-webkit-scrollbar-thumb {
-  background: #f7b267;
-  border-radius: 4px;
-}
-
-/* Newsletter */
-.newsletter {
-  padding: 4rem 1rem;
-  background-color: #fff0db;
-  text-align: center;
-}
-
-.newsletter h3 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75em;
-  margin-top: 1rem;
-}
-
-input[type="email"], button {
-  width: 100%;
-  max-width: 300px;
-  padding: 0.7em;
-  font-size: 1em;
-  border-radius: 5px;
-  border: 1px solid #d3a15d;
-}
-
-button {
-  background-color: #f7b267;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #e09e52;
-}
-
 /* Menu Section */
 .menu-section {
-  padding: 4rem 1rem;
-  max-width: 900px;
+  padding: 4rem 2rem;
+  max-width: 1100px;
   margin: auto;
   text-align: center;
+  background-color: #fffaf3;
 }
 
 .menu-callout {
@@ -211,9 +172,8 @@ button:hover {
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
   text-align: left;
 }
 
@@ -221,7 +181,21 @@ button:hover {
   background-color: #fff;
   border-radius: 10px;
   padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .menu-item h3 {
@@ -241,27 +215,13 @@ button:hover {
 .menu-item p {
   font-size: 0.95rem;
   color: #666;
-}
-
-/* Updated Events Scroll (Centered Layout) */
-.events-scroll {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  padding-bottom: 1rem;
-}
-
-/* Remove old horizontal scrollbar styles */
-.events-scroll::-webkit-scrollbar,
-.events-scroll::-webkit-scrollbar-thumb {
-  display: none;
+  margin: 0;
 }
 
 /* Newsletter + Contact Section */
 .newsletter-contact {
-  background-color: #3a4534; /* deep green */
-  color: #fff;
+  background-color: #3a4534;
+  color: white;
   padding: 4rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -334,27 +294,18 @@ button[type="submit"]:hover {
   font-size: 1rem;
 }
 
-/* Optional: unify footer with bottom section */
+/* Footer */
 footer {
   font-size: 0.9rem;
   margin-top: 0;
   text-align: center;
   padding: 1.5rem 0;
-  background-color: #3a4534; /* match dark section */
+  background-color: #3a4534;
   color: white;
 }
 
-
 /* Responsive */
 @media (max-width: 900px) {
-  .homepage-layout {
-    flex-direction: column;
-  }
-
-  .sidebar-events {
-    margin-top: 2rem;
-  }
-
   .hero-overlay h2 {
     font-size: 2rem;
   }
@@ -363,8 +314,18 @@ footer {
     font-size: 1rem;
   }
 
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .cta-button.large {
     font-size: 1rem;
     padding: 0.75em 1.5em;
+  }
+
+  .newsletter-contact {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
