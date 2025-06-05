@@ -8,17 +8,23 @@ body {
   line-height: 1.6;
 }
 
-header, footer {
+header {
   background-color: #f7b267;
   color: white;
-  text-align: center;
-  padding: 1.5em 0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 h1 {
   margin: 0;
   font-size: 2rem;
   letter-spacing: 1px;
+  white-space: nowrap;
 }
 
 nav ul {
