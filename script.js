@@ -1,41 +1,35 @@
-// Newsletter form submission with a variable, conditional, and event listener
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("newsletterForm");
+// Tab switching logic
+function showTab(tabName) {
+  const tabs = document.querySelectorAll(".menu-tab");
+  tabs.forEach(tab => {
+    tab.classList.add("hidden");
+    tab.classList.remove("active");
+  });
 
-  if (form) {
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      const email = document.getElementById("email").value;
-
-      if (email.includes("@")) {
-        const messageEl = document.getElementById("thankYouMessage");
-        messageEl.textContent = `Thanks for signing up, ${email}!`;
-
-        // Time-based behavior: style the message after 2 seconds
-        setTimeout(() => {
-          messageEl.style.color = "#f7b267";
-          messageEl.style.fontWeight = "bold";
-        }, 2000);
-      } else {
-        alert("Please enter a valid email.");
-      }
-    });
+  const activeTab = document.getElementById(tabName);
+  if (activeTab) {
+    activeTab.classList.remove("hidden");
+    activeTab.classList.add("active");
   }
 
-  // Menu list example (for menu.html if you create it)
-  const menuList = document.getElementById("menuList");
-  if (menuList) {
-    const items = [
-      "Chocolate Chip Cookies",
-      "Almond Croissant",
-      "Blueberry Muffin",
-      "Lemon Tart",
-      "Vanilla Bean Cake"
-    ];
-    items.forEach((item) => {
-      const li = document.createElement("li");
-      li.textContent = item;
-      menuList.appendChild(li);
+  const buttons = document.querySelectorAll(".menu-tabs .tab");
+  buttons.forEach(btn => btn.classList.remove("active"));
+
+  // Use 'this' inside the inline onclick or pass the event properly
+  // For now we fix it like this:
+  document.querySelector(`.menu-tabs .tab[onclick="showTab('${tabName}')"]`)?.classList.add("active");
+}
+
+// Newsletter form thank-you popup
+document.addEventListener("DOMContentLoaded", function () {
+  const newsletterForm = document.getElementById("newsletterForm");
+  if (newsletterForm) {
+    newsletterForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      alert("Спасибо за подписку на нашу рассылку! 🎉\n\nПолучите 10% скидку на следующий заказ с кодом:\nSWEET10");
+
+      newsletterForm.reset();
     });
   }
 });
