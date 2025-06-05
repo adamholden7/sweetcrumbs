@@ -243,15 +243,107 @@ button:hover {
   color: #666;
 }
 
-/* Footer */
+/* Updated Events Scroll (Centered Layout) */
+.events-scroll {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+/* Remove old horizontal scrollbar styles */
+.events-scroll::-webkit-scrollbar,
+.events-scroll::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+/* Newsletter + Contact Section */
+.newsletter-contact {
+  background-color: #3a4534; /* deep green */
+  color: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.newsletter-form,
+.contact-info {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.newsletter-form h3,
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.newsletter-form p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 0.75em;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+button[type="submit"] {
+  margin-top: 1.5rem;
+  padding: 0.75em 2em;
+  font-size: 1rem;
+  font-weight: 600;
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #fff;
+  color: #3a4534;
+}
+
+.contact-info p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Optional: unify footer with bottom section */
 footer {
   font-size: 0.9rem;
-  margin-top: 2rem;
+  margin-top: 0;
   text-align: center;
   padding: 1.5rem 0;
-  background-color: #f7b267;
+  background-color: #3a4534; /* match dark section */
   color: white;
 }
+
 
 /* Responsive */
 @media (max-width: 900px) {
