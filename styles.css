@@ -197,6 +197,54 @@ button:hover {
   color: #666;
 }
 
+.events {
+  background-color: #fff0db;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.events h3 {
+  font-size: 2rem;
+  color: #3e2f1c;
+  margin-bottom: 2rem;
+}
+
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.event-item {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+  background-color: #fffaf3;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.event-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.event-item h4 {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+  color: #d35400;
+}
+
+.event-item p {
+  margin: 0;
+  color: #5a4531;
+}
 
 /* Footer */
 footer {
