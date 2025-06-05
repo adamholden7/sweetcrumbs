@@ -1,16 +1,18 @@
-/* Base Reset */
+/* Базовый сброс: убираем отступы и задаём универсальную модель коробки */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Основные стили для body */
 body {
   font-family: 'Playfair Display', serif;
-  background-color: #fefefc;
-  color: #3b3b3b;
+  background-color: #fefefc; /* Светлый фон */
+  color: #3b3b3b; /* Тёмно-серый текст */
 }
 
-/* Header Navigation */
+/* Шапка сайта с логотипом и навигацией */
 .topbar {
   background: #f8ecdd;
   padding: 1rem 2rem;
@@ -20,27 +22,32 @@ body {
   position: relative;
   z-index: 2;
 }
+
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
   color: #3e3b2e;
 }
+
 .logo span {
   color: #6b8f71;
   font-weight: 500;
 }
+
+/* Навигационные ссылки */
 nav a {
   margin-left: 1.5rem;
   text-decoration: none;
   font-size: 0.95rem;
   color: #3e3b2e;
 }
+
 nav a.user,
 nav a.cart {
   font-weight: 500;
 }
 
-/* Hero Section */
+/* Секция hero: главный баннер */
 .hero {
   position: relative;
   height: 100vh;
@@ -49,42 +56,49 @@ nav a.cart {
   justify-content: center;
   text-align: center;
   padding: 0 2rem;
-  background-image: url('images/hero.jpg'); 
+  background-image: url('images/hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
 }
+
+/* Полупрозрачный затемняющий слой */
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0,0,0,0.3);
   z-index: 1;
 }
+
+/* Контейнер с текстом внутри hero */
 .hero-text {
   position: relative;
   z-index: 2;
   max-width: 600px;
   color: #fff;
 }
+
 .hero-text .subtitle {
   font-size: 1rem;
   margin-bottom: 1rem;
   opacity: 0.8;
 }
+
 .hero-text h1 {
   font-size: 3rem;
   line-height: 1.2;
   margin-bottom: 2rem;
 }
+
+/* Кнопки в hero */
 .hero-buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
+
+/* Основной стиль кнопки */
 .btn {
   background-color: #6b8f71;
   color: white;
@@ -94,20 +108,25 @@ nav a.cart {
   font-size: 1rem;
   transition: all 0.3s ease;
 }
+
+/* Обводка кнопки */
 .btn.outline {
   background: transparent;
   border: 2px solid white;
   color: white;
 }
+
+/* Эффекты при наведении */
 .btn:hover {
   background-color: #587a5f;
 }
+
 .btn.outline:hover {
   background-color: white;
   color: #6b8f71;
 }
 
-/* Announcement Bar */
+/* Панель с объявлением */
 .announcement-bar {
   background: #5e6952;
   color: white;
@@ -117,15 +136,19 @@ nav a.cart {
   letter-spacing: 0.5px;
 }
 
+/* Секция меню */
 .menu-section {
   background: #fef8f2;
   padding: 4rem 2rem;
   text-align: center;
 }
+
+/* Заголовок меню */
 .menu-header h2 {
   font-size: 2.8rem;
   color: #3e3b2e;
 }
+
 .menu-header p {
   font-size: 1rem;
   color: #6e6e6e;
@@ -133,12 +156,14 @@ nav a.cart {
   margin-bottom: 2rem;
 }
 
+/* Кнопки табов */
 .menu-tabs {
   display: flex;
   justify-content: center;
   gap: 2rem;
   margin-bottom: 2rem;
 }
+
 .menu-tabs .tab {
   background: none;
   border: none;
@@ -149,6 +174,8 @@ nav a.cart {
   position: relative;
   color: #3e3b2e;
 }
+
+/* Активный таб с нижней линией */
 .menu-tabs .tab.active::after {
   content: "";
   position: absolute;
@@ -159,15 +186,20 @@ nav a.cart {
   left: 0;
 }
 
+/* Контейнер с содержимым меню */
 .menu-content {
   max-width: 1000px;
   margin: 0 auto;
   text-align: left;
 }
+
+/* Заголовок категории */
 .menu-category h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
+
+/* Список блюд */
 .menu-items {
   display: flex;
   gap: 2rem;
@@ -175,18 +207,23 @@ nav a.cart {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+/* Элемент меню */
 .menu-item {
   width: 30%;
   min-width: 250px;
 }
+
 .menu-item h4 {
   font-size: 1.1rem;
   margin-bottom: 0.3rem;
 }
+
 .menu-item p {
   font-size: 0.9rem;
   color: #666;
 }
+
 .menu-item span {
   font-size: 0.9rem;
   display: inline-block;
@@ -195,17 +232,20 @@ nav a.cart {
   color: #3e3b2e;
 }
 
+/* Класс для скрытия элементов */
 .hidden {
   display: none;
 }
 
-/* Footer */
+/* Подвал сайта */
 .footer {
   background-color: #3e4936;
   color: white;
   padding: 4rem 2rem 2rem;
   font-size: 0.95rem;
 }
+
+/* Контейнер подвала */
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -214,22 +254,27 @@ nav a.cart {
   margin: auto;
   gap: 2rem;
 }
+
 .footer h3 {
   font-size: 1.6rem;
   margin-bottom: 1rem;
 }
+
 .footer p {
   margin-bottom: 1rem;
   line-height: 1.5;
 }
 
+/* Форма подписки на рассылку */
 .newsletter-form {
   display: flex;
   flex-direction: column;
 }
+
 .newsletter-form label {
   margin-bottom: 0.5rem;
 }
+
 .newsletter-form input[type="email"] {
   padding: 0.8rem;
   margin-bottom: 1rem;
@@ -237,14 +282,19 @@ nav a.cart {
   border-radius: 6px;
   font-family: 'Playfair Display', serif;
 }
+
+/* Группа чекбокса согласия */
 .checkbox-group {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
 }
+
 .checkbox-group input[type="checkbox"] {
   margin-right: 0.5rem;
 }
+
+/* Кнопка отправки формы */
 .newsletter-form button {
   padding: 0.7rem 1.5rem;
   border: 1px solid white;
@@ -255,11 +305,13 @@ nav a.cart {
   border-radius: 5px;
   transition: 0.3s ease;
 }
+
 .newsletter-form button:hover {
   background-color: white;
   color: #3e4936;
 }
 
+/* Нижняя часть подвала */
 .footer-bottom {
   text-align: center;
   padding-top: 2rem;
